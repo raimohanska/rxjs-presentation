@@ -1,0 +1,31 @@
+<html>
+<head>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/underscore.js"></script>
+	<script type="text/javascript" src="lib/rx.js"></script>
+	<script type="text/javascript" src="lib/rx.jQuery.js"></script>
+	<script type="text/javascript" src="lib/raphael.js"></script>
+	<script type="text/javascript" src="lib/vector.js"></script>
+  <script type="text/javascript" src="presentation.js"></script>
+  <script type="text/javascript" src="keystate.js"></script>
+  <script type="text/javascript" src="1.js"></script>
+  <script type="text/javascript">
+    $(function() { initPresentation(1) })
+  </script>
+  <link href="devday-rx.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div id="content">
+  <h1>Concat, Merge, Select</h1>
+  <ul>
+    <li>Start the stream with <code>false</code></li> 
+    <li>Concat with key-downs, mapped to <code>true</code></li>
+    <li>Merge in the key-ups, mapped to <code>false</code></li>    
+  </ul>
+  </div>
+  <div id="demo">
+    <label>Spacebar down=</label><span id="keyState"></span>	
+  </div>
+  <div id="src"><pre/></div>
+</body>
+</html><html>

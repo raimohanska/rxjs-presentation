@@ -1,0 +1,34 @@
+<html>
+<head>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/underscore.js"></script>
+	<script type="text/javascript" src="lib/rx.js"></script>
+	<script type="text/javascript" src="lib/rx.jQuery.js"></script>
+	<script type="text/javascript" src="lib/raphael.js"></script>
+	<script type="text/javascript" src="lib/vector.js"></script>
+  <script type="text/javascript" src="presentation.js"></script>
+  <script type="text/javascript" src="4.js"></script>
+  <script type="text/javascript" src="keystate.js"></script>
+  <script type="text/javascript">
+    $(function() { initPresentation(4) })
+  </script>
+  <link href="devday-rx.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div id="content">
+  <h1>Vector arithmetics</h1>
+  <ul>
+    <li>Use <code>Select</code> to get the <code>head</code> from the list of active directions</li>
+    <li>Use <code>Select</code> to map each key to a direction vector (Point)</li>
+    <li>Use Scan to create the position stream</li>
+  </ul>
+  </div>
+  <div id="demo">
+  <label>Player position:</label><span id="position"></span>	
+  </div>
+  <div id="src"><pre/></div>  
+</body>
+</html><html>
+
+
+

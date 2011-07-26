@@ -1,0 +1,31 @@
+<html>
+<head>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/underscore.js"></script>
+	<script type="text/javascript" src="lib/rx.js"></script>
+	<script type="text/javascript" src="lib/rx.jQuery.js"></script>
+	<script type="text/javascript" src="lib/raphael.js"></script>
+	<script type="text/javascript" src="lib/vector.js"></script>
+  <script type="text/javascript" src="presentation.js"></script>
+  <script type="text/javascript" src="keystate.js"></script>
+  <script type="text/javascript" src="3.js"></script>
+  <script type="text/javascript">
+    $(function() { initPresentation(3) })
+  </script>
+  <link href="devday-rx.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div id="content">
+  <h1>Sample, Scan</h1>
+  <ul>
+    <li>Sample is used to repeat the latest direction value each 200 ms</li> 
+    <li>Scan is used to accumulate the movements into an array</li>
+  </ul>
+  </div>
+  <div id="demo">
+    <label>Movements:</label><span id="movements"></span>	
+  </div>  
+  <div id="src"><pre/></div>  
+</body>
+</html><html>
+
