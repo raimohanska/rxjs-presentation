@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="lib/rx.jQuery.js"></script>
 	<script type="text/javascript" src="lib/raphael.js"></script>
 	<script type="text/javascript" src="lib/vector.js"></script>
+	<script type="text/javascript" src="lib/prettify.js"></script>
   <script type="text/javascript" src="presentation.js"></script>
   <script type="text/javascript" src="keystate.js"></script>
   <script type="text/javascript" src="3.js"></script>
@@ -13,19 +14,22 @@
     $(function() { initPresentation(3) })
   </script>
   <link href="devday-rx.css" rel="stylesheet" type="text/css"/>
+  <link href="prettify.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
   <div id="content">
-  <h1>Sample, Scan</h1>
+  <h1>Interval, Scan</h1>
   <ul>
-    <li>Sample is used to repeat the latest direction value each 200 ms</li> 
-    <li>Scan is used to accumulate the movements into an array</li>
+	  <li><em>Interval</em> function creates an <em>Observable</em> that generates an event each 200 millis</li> 
+	  <li><em>CombineLatest</em> is used to pick the latest direction and repeat it each 200 millis</li>
+	  <li><em>Scan</em> is used to accumulate the movements into an array</li>
+	  <li>Array contents are dumped out in the demo div</li>
   </ul>
   </div>
   <div id="demo">
     <label>Movements:</label><span id="movements"></span>	
   </div>  
-  <div id="src"><pre/></div>  
+  <div id="src"><pre class="prettyprint"/></div>
 </body>
 </html><html>
 

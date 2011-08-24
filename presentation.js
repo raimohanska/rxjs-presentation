@@ -6,5 +6,5 @@ function initPresentation(id) {
     .Subscribe(function(id) { document.location=id + ".html" })
 }
 function showSrc(file) {
-  $('#src pre').load(file) 
+  $('#src pre').load(file, function() { prettyPrint()}) 
 }

@@ -12,8 +12,8 @@ function GameController(startPos) {
   
   var directionVector = direction.Select(function(name) { return mapping[name] })
  
-  var movements = directionVector
-    .Sample(50)
+  var movements = Rx.Observable.Interval(50)
+    .CombineLatest(directionVector, function(_, dir) { return dir })
     .Where(id)
 
   var position = movements

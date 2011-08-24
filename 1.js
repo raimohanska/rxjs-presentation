@@ -10,7 +10,7 @@ $(function() {
   function keyState(keyCode) {
     return Rx.Observable.FromArray([false])
       .Concat(keyDowns(keyCode).Select(always(true)))
-        .Merge(keyUps(keyCode).Select(always(false)))
+      .Merge(keyUps(keyCode).Select(always(false)))
   }
   
   keyState(32).Subscribe(function(spaceDown) { $('#keyState').text(spaceDown) })  

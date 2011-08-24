@@ -6,8 +6,8 @@ $(function() {
     .CombineLatest(keyState(37, 'LEFT'), concat)
     .CombineLatest(keyState(39, 'RIGHT'), concat)
     
-  var movements = direction
-    .Sample(200)
+  var movements = Rx.Observable.Interval(200)
+    .CombineLatest(direction, function(_, dir) { return dir })
     .Where(id)
 
   movements

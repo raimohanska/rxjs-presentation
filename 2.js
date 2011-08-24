@@ -22,6 +22,4 @@ $(function() {
     .CombineLatest(keyState(37, 'LEFT'), concat)
     .CombineLatest(keyState(39, 'RIGHT'), concat)
     .Subscribe(function(keysDown) { $('#keyState').text(keysDown.join(',')) })  
-
-
 })

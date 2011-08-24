@@ -10,4 +10,11 @@ pre { color: #0f0; background: #000; text-align: left; padding: 10px; }
 #content { float : left; width: 60%; margin-bottom: 10px;}
 #src { clear : both; }
 #demo { float : left; width : 200px; height: 200px; margin: 10px; 
-        background: #222;}
+        background: #222; padding: 10px;}
+::selection {
+        background: #550000; /* Safari */
+        }
+::-moz-selection {
+        background: #550000; /* Firefox */
+}
+a { color: #fff}

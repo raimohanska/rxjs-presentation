@@ -14,12 +14,12 @@ $(function() {
   
   var directionVector = direction.Select(function(name) { return mapping[name] })
  
-  var movements = directionVector
-    .Sample(50)
+  var movements = Rx.Observable.Interval(50)
+    .CombineLatest(directionVector, function(_, dir) { return dir })
     .Where(id)
 
   var position = movements
-    .Scan(startPos, function(pos, move) { return pos.add(move.times(4)) })
+    .Scan(startPos, function(pos, move) { return pos.add(move) })
     .StartWith(startPos)
 
 
