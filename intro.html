@@ -1,17 +1,36 @@
 <html>
 <head>
-	<script type="text/javascript" src="lib/jquery.js"></script>
-	<script type="text/javascript" src="lib/underscore.js"></script>
-	<script type="text/javascript" src="lib/rx.js"></script>
-	<script type="text/javascript" src="lib/rx.jQuery.js"></script>
-	<script type="text/javascript" src="lib/raphael.js"></script>
-	<script type="text/javascript" src="lib/vector.js"></script>
-	<script type="text/javascript" src="lib/prettify.js"></script>
+  <script type="text/javascript" src="lib/jquery.js"></script>
+  <script type="text/javascript" src="lib/underscore.js"></script>
+  <script type="text/javascript" src="lib/rx.js"></script>
+  <script type="text/javascript" src="lib/rx.jQuery.js"></script>
+  <script type="text/javascript" src="lib/raphael.js"></script>
+  <script type="text/javascript" src="lib/vector.js"></script>
+  <script type="text/javascript" src="lib/prettify.js"></script>
   <script type="text/javascript" src="presentation.js"></script>
   <script type="text/javascript" src="keystate.js"></script>
   <script type="text/javascript" src="1.js"></script>
   <script type="text/javascript">
     $(function() { initPresentation(1) })
+    $(function() {
+        Rx.Observable.prototype.ZipWithArray = function(array, selector) { 
+          var arrayElementObservable = this
+            .Scan(-1, function(idx) { return idx +1 })
+            .TakeWhile(function(idx) { return (idx < array.length)})
+            .Select(function(idx) { return array[idx] })
+          return this.Zip(arrayElementObservable, selector)
+        }
+
+        var elements = $('.anim')
+        elements.hide()
+        keyUps(32)
+        .ZipWithArray(elements, function(_, el) { return el })
+        .Select($)
+        //.Zip(Rx.Observable.Interval(100), function(a, b) { return a })
+        //.Zip(keyUps(32), function(a, _) { return a })
+        .Subscribe(function(e) { e.show() })
+
+    })
   </script>
   <link href="prettify.css" rel="stylesheet" type="text/css"/>
   <link href="devday-rx.css" rel="stylesheet" type="text/css"/>
@@ -21,16 +40,16 @@
   <h1>Rx for Javascript</h1>
   <h5>Juha Paananen / Reaktor DevDay 2011-09-02</h5>
   <ul>
-	<li>~30 kb Javascript
-	<li>Developed by Microsoft, originally for .NET
-	<li>Free as in beer (not FOSS)
-	<li>For event-driven (reactive) Javascript programming
-	<li>Observable streams of events
-	<li>Bindings to JQuery etc
-	<li>Combinators (like FP list operations)
-	<li>Removes explicit mutable state from complex apps
-	<li>Good for input validation, calculation, games?
-	<li><blink>|</blink>
+  <li class="anim">~30 kb Javascript
+  <li class="anim">Developed by Microsoft, originally for .NET
+  <li class="anim">Free as in beer (not FOSS)
+  <li class="anim">For event-driven (reactive) Javascript programming
+  <li class="anim">Observable streams of events
+  <li class="anim">Bindings to JQuery etc
+  <li class="anim">Combinators (like FP list operations)
+  <li class="anim">Removes explicit mutable state from complex apps
+  <li class="anim">Good for input validation, calculation, games?
+  <li><blink>|</blink>
   </ul>
   </div>
 </body>
