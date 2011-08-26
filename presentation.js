@@ -6,6 +6,10 @@ function initPresentation(id) {
     .Merge(keyUps(190).Select(function () { return Math.min(currentSlide() + 1, slides.length - 1)} ))
     .Subscribe(showSlide)
   keyUps(48).Subscribe(function() { showSlide(0) })
+  keyUps(32)
+    .ZipWithArray($('.anim').hide(), function(_, el) { return $(el) })
+    .Subscribe(function(e) { e.show(100) })
+
 }
 
 function showSrc(file) {
@@ -18,3 +22,8 @@ function currentSlide() {
   }
   return 0
 }
+
+Rx.Observable.prototype.ZipWithArray = function(array, selector) { 
+  return this.Zip(Rx.Observable.FromArray(array).Concat(Rx.Observable.Never()), selector)
+}
+
