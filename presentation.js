@@ -1,4 +1,4 @@
-var slides = ['intro.html', '0.html', '1.html', '2.html', '3.html', '4.html', '5.html', '6.html', '7.html']
+var slides = ['intro.html', '0.html', '1.html', '2.html', '3.html', '4.html', '5.html', '6.html', 'presentation.html']
 
 function initPresentation(id) { 
   showSrc(id + ".js") 
