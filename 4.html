@@ -11,7 +11,10 @@
   <script type="text/javascript" src="4.js"></script>
   <script type="text/javascript" src="keystate.js"></script>
   <script type="text/javascript">
-    $(function() { initPresentation(4) })
+    $(function() { 
+        initPresentation(4); 
+        $("#show-vector-js").click(function() { showSrc("lib/vector.js")}) 
+    })
   </script>
   <link href="devday-rx.css" rel="stylesheet" type="text/css"/>
   <link href="prettify.css" rel="stylesheet" type="text/css"/>
@@ -23,6 +26,7 @@
     <li>Replace strings with 2D vectors</li>
     <li>Use <code>Select</code> to get the <code>head</code> from the list of active directions</li>
     <li>Use Scan to create the position stream</li>
+    <li>A <a href="#" id="show-vector-js">vector.js</a> library provides 2D vector calculations</li>
   </ul>
   </div>
   <div id="demo">
