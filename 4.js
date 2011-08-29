@@ -4,18 +4,14 @@ $(function() {
   function head(array) { return array[0] }
   function id(x) { return x }
 
-  var direction = keyState(38, 'up')
-    .CombineLatest(keyState(40, 'down'), concat)
-    .CombineLatest(keyState(37, 'left'), concat)
-    .CombineLatest(keyState(39, 'right'), concat)
+  var direction = keyState(38, new Vector2D(0, -1))
+    .CombineLatest(keyState(40, new Vector2D(0, 1)), concat)
+    .CombineLatest(keyState(37, new Vector2D(-1, 0)), concat)
+    .CombineLatest(keyState(39, new Vector2D(1, 0)), concat)
     .Select(head)
 
-  var mapping = { up : Point(0, -1), down : Point(0, 1), left: Point(-1, 0), right: Point(1, 0)}
-  
-  var directionVector = direction.Select(function(name) { return mapping[name] })
- 
   var movements = Rx.Observable.Interval(50)
-    .CombineLatest(directionVector, function(_, dir) { return dir })
+    .CombineLatest(direction, function(_, dir) { return dir })
     .Where(id)
 
   var position = movements

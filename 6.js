@@ -10,7 +10,7 @@ $(function() {
   animation.Subscribe(function (index) { 
     man.attr({src : "images/man-left-" + index + ".png"})}) 
  
-  var angle = controller.directionVector
+  var angle = controller.direction
     .Where(id)
     .Select(function(vec) { return vec.getAngleDeg()})
   angle.Subscribe(function(angle) { man.rotate(angle + 180, true) })
