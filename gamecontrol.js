@@ -16,5 +16,5 @@ function GameController(startPos) {
     .Scan(startPos, function(pos, move) { return pos.add(move.times(4)) })
     .StartWith(startPos)
 
-  return { direction : direction, position : position }
+  return { direction : direction, position : position, fire : keyDowns(32) }
 }
