@@ -12,7 +12,10 @@
   <script type="text/javascript" src="keystate.js"></script>
   <script type="text/javascript" src="gamecontrol.js"></script>
   <script type="text/javascript">
-    $(function() { initPresentation(5) })
+    $(function() { 
+        initPresentation(5); 
+        $("#show-js").click(function() { showSrc("gamecontrol.js")}) 
+    })
   </script>
   <link href="devday-rx.css" rel="stylesheet" type="text/css"/>
   <link href="prettify.css" rel="stylesheet" type="text/css"/>
@@ -21,7 +24,7 @@
   <div id="content">
   <h1>Side-effects</h1>
   <ul>
-    <li>Extracted control logic into GameController object</li>
+    <li>Extracted control logic into GameController object in <a href="#" id="show-js">gamecontrol.js</a></li>
     <li>Use raphael.js to create a canvas and an image</li>
     <li>Subscribe to position stream, update image position</li>
   </ul>
