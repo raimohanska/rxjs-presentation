@@ -20,8 +20,7 @@
   <div id="content">
     <h1>CombineLatest</h1>
     <ul>
-      <li>Key states of arrow keys are mapped to UP, DOWN, LEFT, RIGHT</li>
-      <li>More specifically, either an empty array or a singleton array</li>
+      <li>Key state stream for each arrow key will produce for instance ['LEFT'] when key is down and [] otherwise
       <li>CombineLatest is used to combine a key state stream with the next one</li>
       <li>The concat function is used to collect the state of all arrow keys into a single array</li>
     </ul>

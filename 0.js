@@ -1,5 +1,4 @@
 $(function() {
-  // allKeyUps is an Observable stream of all key-up events
   var allKeyUps = $(document).toObservable("keyup")
 
   var spaceBarKeyUps = allKeyUps
