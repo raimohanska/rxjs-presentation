@@ -33,6 +33,6 @@ published [here](http://eea.kapsi.fi/RXJS/).
 
 ### Where is it used ###
 
-- [Reaktor](www.reaktor.fi) uses for both internal and external projects
+- [Reaktor](http://www.reaktor.fi) uses for both internal and external projects
 - [validation.js](http://github.com/reaktor/validation.js)
 - [Worzone](http://juhajasatu.com/worzone) the game
