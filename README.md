@@ -30,3 +30,9 @@ published [here](http://eea.kapsi.fi/RXJS/).
 - Matt Podwysocki's [blog postings](http://codebetter.com/matthewpodwysocki/2010/08/25/introduction-to-the-reactive-extensions-for-javascript-buffering/)
 - My own blog: [Nullzzz blog on RxJs Game Programming](http://nullzzz.blogspot.com/2011/02/game-programming-with-rx-js.html)
 - Joni Freeman's [slides](https://github.com/jonifreeman/learn-rx) for an internal Reaktor session.
+
+### Where is it used ###
+
+- [Reaktor](www.reaktor.fi) uses for both internal and external projects
+- [validation.js](http://github.com/reaktor/validation.js)
+- [Worzone](http://juhajasatu.com/worzone) the game
