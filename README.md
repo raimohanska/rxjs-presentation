@@ -25,6 +25,8 @@ published [here](http://eea.kapsi.fi/RXJS/).
 
 ### Intros ###
 
+- [MSDN](http://msdn.microsoft.com/en-us/library/hh242985%28v=VS.103%29.aspx)
+- Jeffrey Van Gogh's presentation [(video)](http://msdn.microsoft.com/en-us/library/hh242985%28v=VS.103%29.aspx)
 - Matt Podwysocki's [blog postings](http://codebetter.com/matthewpodwysocki/2010/08/25/introduction-to-the-reactive-extensions-for-javascript-buffering/)
 - My own blog: [Nullzzz blog on RxJs Game Programming](http://nullzzz.blogspot.com/2011/02/game-programming-with-rx-js.html)
 - Joni Freeman's [slides](https://github.com/jonifreeman/learn-rx) for an internal Reaktor session.
