@@ -1,0 +1,40 @@
+<html>
+<head>
+  <script type="text/javascript" src="lib/jquery.js"></script>
+  <script type="text/javascript" src="lib/underscore.js"></script>
+  <script type="text/javascript" src="lib/rx.js"></script>
+  <script type="text/javascript" src="lib/rx.jQuery.js"></script>
+  <script type="text/javascript" src="lib/raphael.js"></script>
+  <script type="text/javascript" src="lib/vector.js"></script>
+  <script type="text/javascript" src="lib/prettify.js"></script>
+  <script type="text/javascript" src="presentation.js"></script>
+  <script type="text/javascript" src="keystate.js"></script>
+  <script type="text/javascript">
+    $(function() { initPresentation(7); showSrc('presentation.js') })
+  </script>
+  <link href="devday-rx.css" rel="stylesheet" type="text/css"/>
+  <link href="prettify.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div id="content">
+    <h1>Haskell List Analogy</h1>
+  <table>
+    <thead>
+      <tr><th>Combinator</th><th>Haskell Analogy</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Where</td><td>filter</td></tr>
+      <tr><td>Select</td><td>map</td></tr>
+      <tr><td>Concat, Merge</td><td>concat</td></tr>
+      <tr><td>Zip</td><td>zipWith</td></tr>
+      <tr><td>Scan</td><td>scanl</td></tr>
+      <tr><td>SelectMany</td><td>Monadic bind (&gt;&gt;=)</td></tr>
+    </tbody>    
+  <table>
+
+  </div>
+</body>
+</html><html>
+
+
+
