@@ -1,8 +1,8 @@
 Reactive Extensions For JavaScript
 ==================================
 
-A Presentation for Reaktor DevDay on 2011-09-02
------------------------------------------------
+A Presentation originally held at Reaktor DevDay on 2011-09-02
+--------------------------------------------------------------
 
 This repo contains all the material I've prepared for the presentation.
 I'm writing this readme for you to use as a landing spot after the
