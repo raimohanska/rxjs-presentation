@@ -18,3 +18,4 @@ pre { color: #0f0; background: #000; text-align: left; padding: 10px; }
         background: #550000; /* Firefox */
 }
 a { color: #fff}
+.hilite { color : #ffff00 ; display : block; }

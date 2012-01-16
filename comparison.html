@@ -1,0 +1,36 @@
+<html>
+ <head>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/underscore.js"></script>
+    <script type="text/javascript" src="lib/rx.js"></script>
+    <script type="text/javascript" src="lib/rx.jQuery.js"></script>
+    <script type="text/javascript" src="presentation.js"></script>
+    <script type="text/javascript" src="keystate.js"></script>
+    <script type="text/javascript">
+      $(function() { initPresentation(1) })
+    </script>
+    <link href="prettify.css" rel="stylesheet" type="text/css"/>
+    <link href="devday-rx.css" rel="stylesheet" type="text/css"/>
+    <title>Comparison of DOM, jQuery, Rx</title>
+  </head>
+  <body>
+  <h1>DOM -&gt; jQuery -&gt; RxJs</h1>
+    <h2>DOM</h2>
+    <code>document.getElementById("slide").onclick = function() { console.log("hello") }</code>
+    <h2>jQuery</h2>
+    <code>$("#slide").click(function() { console.log("hello") })</code>
+    <pre class="anim hilite">
+    var sum = 0
+    $("#slide").click(function() { 
+      sum += 1
+      console.log("sum=" + sum) })
+    </pre>
+    <h2>RxJs</h2>
+    <code>$("#slide").toObservable("click").Subscribe(function() { console.log("hello")})</code>
+    <pre class="anim hilite">
+    $("#slide").toObservable("click")
+        .Scan(0, function(acc, _) { return acc + 1} )
+        .Subscribe(function(sum) { console.log("sum=" + sum)})
+    </pre>
+  </body>
+</html>

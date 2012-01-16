@@ -1,0 +1,26 @@
+<html>
+ <head>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/rx.js"></script>
+    <script type="text/javascript" src="lib/rx.jQuery.js"></script>
+    <script type="text/javascript" src="lib/prettify.js"></script>
+    <script type="text/javascript" src="lib/validation.js"></script>
+    <script type="text/javascript" src="presentation.js"></script>
+    <script type="text/javascript" src="excel.js"></script>
+    <script type="text/javascript">
+      $(function() { showSrc("excel.js")  })
+    </script>
+    <link href="prettify.css" rel="stylesheet" type="text/css"/>
+    <link href="devday-rx.css" rel="stylesheet" type="text/css"/>
+    <title>Excel analogy</title>
+  </head>
+  <body>
+  <h1>Excel analogy</h1>
+    <table class="excel">
+    <tr><th>&nbsp;<th>A<th>B<th>C(=A1+B1)</tr>
+    <tr><th>1<th><input id="a1" type="text" value="1"><th><input id="b1" type="text" value="2"><th><input id="c1" type="text" value="=A1+B2">
+    </table>
+    <div id="src"><pre class="prettyprint"></pre></div>
+  </body>
+</html>
+

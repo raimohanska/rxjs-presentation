@@ -1,5 +1,5 @@
 $(function() {
-  var startPos = Point(50, 50)
+  var startPos = new Vector2D(50, 50)
 
   function head(array) { return array[0] }
   function id(x) { return x }
